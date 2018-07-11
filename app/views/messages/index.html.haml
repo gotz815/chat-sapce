@@ -1,0 +1,26 @@
+.wrapper
+  = render 'shared/side_bar'
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          = @group.name
+        %ul.left-header__members
+          Members :
+          %li.member
+            = @group.messages.name
+      .right-header
+        = link_to "Edit", edit_group_path(@group), method: :get, class: 'right-header__button'
+    .messages
+      = render @messages
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'fa fa-image'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+
+        /multipartオプションを有効にする
+        / f.file_fieldの時にenctype="multipart/form-data"属性を指定する必要があります！

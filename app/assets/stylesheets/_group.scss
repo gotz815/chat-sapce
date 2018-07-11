@@ -1,0 +1,13 @@
+.group {
+  display: block;
+  margin-bottom: 40px;
+  &__name {
+    color: white;
+    font-size: 15px;
+  }
+  &__name-content {
+    color: white;
+    margin-top: 5px;
+    font-size: 11px;
+  }
+}

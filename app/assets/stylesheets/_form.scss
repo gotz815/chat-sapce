@@ -1,0 +1,43 @@
+.form {
+  height: 90px;
+  background-color: #eeeeee;
+  padding-right: 40px;
+  padding-left: 50px;
+  clear: both;
+  position-bottom: fixed;
+  &__message {
+    width: 870px;
+    height: 50px;
+    margin-top: 19px;
+    padding-right: 35px;
+    color: #dddddd;
+    float: left;
+    border: 0;
+  }
+  &__submit {
+    width: 100px;
+    height: 45px;
+    margin-left: 25px;
+    background-color: #00bfff;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    padding-bottom: 2px;
+    float: right;
+  }
+
+  .form__image {
+    height: 50px;
+    width: 30px;
+    margin-top: 19px;
+    float: left;
+    background-color: white;
+    margin-right: 10px;
+  }
+
+  i.fa.fa-picture-o {
+    margin-top: 19px;
+    margin-left: 5px;
+  }
+}
